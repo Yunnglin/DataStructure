@@ -18,12 +18,27 @@
     <ClInclude Include="pch.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="SinglyLinkedList.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="PrimeCount.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="header.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="DataStructure.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="SinglyLinkedList.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="PrimeCount.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
