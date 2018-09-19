@@ -8,6 +8,7 @@ class Node {
 public:
 	ElemType data;
 	Node * next;
+	Node();
 };
 
 

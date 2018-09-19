@@ -2,6 +2,7 @@
 #define _Header_H_
 #include "SinglyLinkedList.h"
 #include "PrimeCount.h"
+#include "DuLinkedList.h"
 
 
 

@@ -10,6 +10,11 @@ SinglyLinkedList::~SinglyLinkedList()
 {
 }
 
+Node::Node() {
+	next = NULL;
+	data = NULL;
+}
+
 void SinglyLinkedList::CreateListF(ElemType a[], int n) {//头插法
 	Node* p = new Node();
 	this->header = p;//头节点
@@ -45,7 +50,8 @@ void SinglyLinkedList::DestroyList() {
 		p = pre->next;
 	}
 	delete[] pre;
-	this->header->next = NULL;;
+	this->header->next = NULL;
+	delete[] this;
 }
 
 bool SinglyLinkedList::ListEmpty() {
@@ -61,7 +67,6 @@ int SinglyLinkedList::ListLength() {
 	}
 	return n;
 }
-
 
 void SinglyLinkedList::DispList() {
 	if (this== NULL)
@@ -127,6 +132,7 @@ bool SinglyLinkedList::ListInsert(int i, ElemType e) {
 		return true;
 	}
 }
+
 bool SinglyLinkedList::ListDelete(int i, ElemType &e) {
 	int j = 0;
 	Node* p = this->header, *s;
