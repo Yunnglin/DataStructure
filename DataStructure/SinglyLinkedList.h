@@ -1,16 +1,8 @@
 #pragma once
 #ifndef _SinglyLinkedList_H_
 #define _SinglyLinkedList_H_
-
+#include "Node.h"
 typedef int ElemType;
-
-class Node {
-public:
-	ElemType data;
-	Node * next;
-	Node();
-};
-
 
 class SinglyLinkedList//定义头指针及各种操作函数
 {

@@ -10,10 +10,6 @@ SinglyLinkedList::~SinglyLinkedList()
 {
 }
 
-Node::Node() {
-	next = NULL;
-	data = NULL;
-}
 
 void SinglyLinkedList::CreateListF(ElemType a[], int n) {//ͷ�巨
 	Node* p = new Node();
@@ -150,7 +146,6 @@ bool SinglyLinkedList::ListDelete(int i, ElemType &e) {
 			return false;
 		e = s->data;
 		p->next = s->next;
-		delete[] s;
 		return true;
 	}
 }

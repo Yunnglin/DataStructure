@@ -3,8 +3,6 @@
 #include "SinglyLinkedList.h"
 #include "PrimeCount.h"
 #include "DuLinkedList.h"
-
-
-
+#include "DuLinkedList.cpp"
 #endif // !_Header_H_
 
