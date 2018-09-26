@@ -60,3 +60,71 @@ void DuLinkedList<T>::DispList() {
 	}
 	cout << endl;
 }
+
+template<class T>
+bool DuLinkedList<T>::ListInsert(int i, T e){
+	int j = 0;
+	DNode<T>* h = this->header;
+	DNode<T>* p;
+	if (i <= 0) return false;
+	while (j < i-1&&h != NULL) {
+		h = h->next;
+		j++;
+	}
+	if (h == NULL)
+		return false;
+	else {
+		p = new DNode<T>();
+		p->data = e;
+		p->next = h->next;
+		if(h->next!=NULL)
+			h->next->prior = p;
+		h->next = p;
+		p->prior = h;
+		return true;
+	}
+}
+
+template<class T>
+bool DuLinkedList<T>::ListDelete(int i, T &e) {
+	int j = 0;
+	DNode<T>* h = this->header;
+	DNode<T>* p;
+	if (i <= 0) return false;
+	while (j < i - 1 && h != NULL) {
+		h = h->next;
+		j++;
+	}
+	if (h == NULL)
+		return false;
+	else {
+		p = h->next;
+		if (p == NULL)
+			return false;
+		e = p->data;
+		h->next = p->next;
+		if (p->next != NULL) {
+			p->next->prior = h;
+		}
+		delete[] p;
+		return true;
+
+	}
+}
+
+template<class T>
+bool DuLinkedList<T>::ListReverse() {
+	DNode<T>* h = this->header;
+	DNode<T>* p = h->next, * q;
+	h->next = NULL;
+	while (p != NULL) {
+		q = p->next;
+		p->next = h->next;
+		if(h->next!=NULL)
+			h->next->prior = p;
+		h->next = p;
+		p->prior = h;
+		p = q;
+	}
+	return true;
+}

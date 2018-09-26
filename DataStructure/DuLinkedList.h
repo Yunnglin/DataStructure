@@ -18,6 +18,9 @@ public:
 	void CreateListF(T a[], int n);//头插法
 	void CreateListR(T a[], int n);//尾插法
 	void DispList();//输出双向链表
+	bool ListInsert(int i, T e);//插入结点
+	bool ListDelete(int i, T &e);//删除结点
+	bool ListReverse();
 
 public:
 	DuLinkedList();

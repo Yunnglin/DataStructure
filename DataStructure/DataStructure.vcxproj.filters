@@ -13,25 +13,40 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="项目实验">
+      <UniqueIdentifier>{9d15c7ed-03ee-4c70-aa98-9c3159cf2d05}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="项目实验\计算质数">
+      <UniqueIdentifier>{f26f7661-09d3-441a-a63c-174a75a54db8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="项目实验\单链表">
+      <UniqueIdentifier>{0a47794d-20f6-46ba-8010-cd257f532f14}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="项目实验\双链表（模板）">
+      <UniqueIdentifier>{870d2ed2-d974-4a49-a78d-b70b11ad71c4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="项目实验\结点">
+      <UniqueIdentifier>{2dfcda38-1b2b-4150-bf48-11884200e933}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="SinglyLinkedList.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="PrimeCount.h">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="header.h">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="DuLinkedList.h">
-      <Filter>头文件</Filter>
+      <Filter>项目实验\双链表（模板）</Filter>
+    </ClInclude>
+    <ClInclude Include="SinglyLinkedList.h">
+      <Filter>项目实验\单链表</Filter>
+    </ClInclude>
+    <ClInclude Include="PrimeCount.h">
+      <Filter>项目实验\计算质数</Filter>
     </ClInclude>
     <ClInclude Include="Node.h">
-      <Filter>头文件</Filter>
+      <Filter>项目实验\结点</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -41,17 +56,17 @@
     <ClCompile Include="DataStructure.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="DuLinkedList.cpp">
+      <Filter>项目实验\双链表（模板）</Filter>
+    </ClCompile>
     <ClCompile Include="SinglyLinkedList.cpp">
-      <Filter>源文件</Filter>
+      <Filter>项目实验\单链表</Filter>
     </ClCompile>
     <ClCompile Include="PrimeCount.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="DuLinkedList.cpp">
-      <Filter>源文件</Filter>
+      <Filter>项目实验\计算质数</Filter>
     </ClCompile>
     <ClCompile Include="Node.cpp">
-      <Filter>源文件</Filter>
+      <Filter>项目实验\结点</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
