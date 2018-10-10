@@ -20,7 +20,7 @@ public:
 	void DispList();//输出双向链表
 	bool ListInsert(int i, T e);//插入结点
 	bool ListDelete(int i, T &e);//删除结点
-	bool ListReverse();
+	bool ListReverse();//链表反转
 
 public:
 	DuLinkedList();

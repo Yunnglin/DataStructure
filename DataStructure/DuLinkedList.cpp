@@ -127,4 +127,5 @@ bool DuLinkedList<T>::ListReverse() {
 		p = q;
 	}
 	return true;
+
 }

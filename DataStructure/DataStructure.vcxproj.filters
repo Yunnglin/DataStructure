@@ -28,6 +28,9 @@
     <Filter Include="项目实验\结点">
       <UniqueIdentifier>{2dfcda38-1b2b-4150-bf48-11884200e933}</UniqueIdentifier>
     </Filter>
+    <Filter Include="项目实验\栈">
+      <UniqueIdentifier>{5214f0b8-87d6-41cf-b67f-3f9b48d59fb9}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">
@@ -48,6 +51,9 @@
     <ClInclude Include="Node.h">
       <Filter>项目实验\结点</Filter>
     </ClInclude>
+    <ClInclude Include="SqStack.h">
+      <Filter>项目实验\栈</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
@@ -67,6 +73,9 @@
     </ClCompile>
     <ClCompile Include="Node.cpp">
       <Filter>项目实验\结点</Filter>
+    </ClCompile>
+    <ClCompile Include="SqStack.cpp">
+      <Filter>项目实验\栈</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

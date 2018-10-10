@@ -157,6 +157,7 @@
     <ClInclude Include="pch.h" />
     <ClInclude Include="PrimeCount.h" />
     <ClInclude Include="SinglyLinkedList.h" />
+    <ClInclude Include="SqStack.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="DataStructure.cpp" />
@@ -170,6 +171,7 @@
     </ClCompile>
     <ClCompile Include="PrimeCount.cpp" />
     <ClCompile Include="SinglyLinkedList.cpp" />
+    <ClCompile Include="SqStack.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
