@@ -12,10 +12,11 @@ SqStack<ElemType>::SqStack()
 template<class ElemType>
 SqStack<ElemType>::~SqStack()
 {
+	
 }
 template<class ElemType>
 void SqStack<ElemType>::DestroyStack() {
-	delete[] this;
+	delete this;
 }
 
 template<class ElemType>
@@ -127,7 +128,6 @@ void SqStack<ElemType>::Trans(char *exp, char postexp[]) {
 		postexp[i++] = e;
 	}
 	postexp[i] = '\0';
-	//optr->DestroyStack();
 }
 
 template<class ElemType>
@@ -181,6 +181,5 @@ double SqStack<ElemType>::CompValue(char* postexp) {
 		postexp++;
 	}
 	opnd->GetTop(e);
-	//opnd->DestroyStack();
 	return e;
 }
