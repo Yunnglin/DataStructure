@@ -21,6 +21,7 @@ public:
 	bool ListInsert(int i, T e);//插入结点
 	bool ListDelete(int i, T &e);//删除结点
 	bool ListReverse();//链表反转
+	void DestroyList();//销毁链表
 
 public:
 	DuLinkedList();

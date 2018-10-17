@@ -151,8 +151,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="CirQueue.h" />
     <ClInclude Include="DuLinkedList.h" />
     <ClInclude Include="header.h" />
+    <ClInclude Include="LinkedQueue.h" />
+    <ClInclude Include="Maze.h" />
     <ClInclude Include="Node.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="PrimeCount.h" />
@@ -160,8 +163,11 @@
     <ClInclude Include="SqStack.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="CirQueue.cpp" />
     <ClCompile Include="DataStructure.cpp" />
     <ClCompile Include="DuLinkedList.cpp" />
+    <ClCompile Include="LinkedQueue.cpp" />
+    <ClCompile Include="Maze.cpp" />
     <ClCompile Include="Node.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>

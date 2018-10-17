@@ -20,8 +20,9 @@ public:
 	bool Pop(ElemType &e);//出栈
 	bool GetTop(ElemType &e);//获得栈顶元素
 
-	void Trans(char *exp, char postexp[]);//将中缀表达式转化为后缀表达式
 
+public:
+	void Trans(char *exp, char postexp[]);//将中缀表达式转化为后缀表达式
 	double CompValue(char* postexp);//计算后缀表达式的值
 
 public:

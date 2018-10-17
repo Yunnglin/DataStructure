@@ -41,13 +41,12 @@ void SinglyLinkedList::DestroyList() {
 	Node* pre = this->header, *p=this->header->next;
 	while (p!=NULL)
 	{
-		delete[] pre;
+		delete pre;
 		pre = p;
 		p = pre->next;
 	}
-	delete[] pre;
+	delete pre;
 	this->header->next = NULL;
-	delete[] this;
 }
 
 bool SinglyLinkedList::ListEmpty() {

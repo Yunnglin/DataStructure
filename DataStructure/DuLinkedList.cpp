@@ -129,3 +129,15 @@ bool DuLinkedList<T>::ListReverse() {
 	return true;
 
 }
+
+template <class T>
+void DuLinkedList<T>::DestroyList() {
+	DNode<T>* pre = this->header, *p=pre->next;
+	while (p != NULL) {
+		delete pre;
+		pre = p;
+		p = p->next;
+	}
+	delete pre;
+	this->header->next = NULL;
+}
