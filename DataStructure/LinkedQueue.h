@@ -2,12 +2,13 @@
 #ifndef  _LinkedQueue_H_
 #define _LinkedQueue_H_
 #include "Node.h"
-
+#include "Node.cpp"
+template<class ElemType>
 class LinkedQueue
 {
 public :
-	Node* front;//指向队首结点
-	Node* rear;//指向队尾结点
+	Node<ElemType>* front;//指向队首结点
+	Node<ElemType>* rear;//指向队尾结点
 
 	void DestroyQueue();//销毁队列
 	bool QueueEmpty();//判断队列是否为空

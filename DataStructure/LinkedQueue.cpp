@@ -1,20 +1,20 @@
 #include "pch.h"
 #include "LinkedQueue.h"
 using namespace std;
-
-LinkedQueue::LinkedQueue()
+template<class ElemType>
+LinkedQueue<ElemType>::LinkedQueue()
 {
 	this->front = NULL;
 	this->rear = NULL;
 }
 
-
-LinkedQueue::~LinkedQueue()
+template<class ElemType>
+LinkedQueue<ElemType>::~LinkedQueue()
 {
 }
-
-void LinkedQueue::DestroyQueue() {
-	Node* pre = this->front, *p;
+template<class ElemType>
+void LinkedQueue<ElemType>::DestroyQueue() {
+	Node<ElemType>* pre = this->front, *p;
 	if (pre != NULL) {
 		p = pre->next;
 		while (p != NULL) {
@@ -26,13 +26,13 @@ void LinkedQueue::DestroyQueue() {
 	}
 	delete this;
 }
-
-bool LinkedQueue::QueueEmpty() {
+template<class ElemType>
+bool LinkedQueue<ElemType>::QueueEmpty() {
 	return (this->rear == NULL);
 }
-
-void LinkedQueue::enQueue(ElemType e) {
-	Node* p = new Node();
+template<class ElemType>
+void LinkedQueue<ElemType>::enQueue(ElemType e) {
+	Node<ElemType>* p = new Node<ElemType>();
 	p->data = e;
 	p->next = NULL;
 	if (this->rear == NULL) {
@@ -43,9 +43,9 @@ void LinkedQueue::enQueue(ElemType e) {
 		this->rear = p;
 	}
 }
-
-bool LinkedQueue::deQueue(ElemType &e) {
-	Node* t;
+template<class ElemType>
+bool LinkedQueue<ElemType>::deQueue(ElemType &e) {
+	Node<ElemType>* t;
 	if (this->rear == NULL)
 		return false;
 	t = this->front;
@@ -57,9 +57,9 @@ bool LinkedQueue::deQueue(ElemType &e) {
 	delete t;
 	return true;
 }
-
-void LinkedQueue::Display() {
-	Node* pre = this->front;
+template<class ElemType>
+void LinkedQueue<ElemType>::Display() {
+	Node<ElemType>* pre = this->front;
 	if (pre == NULL)
 		return;
 	while (pre != NULL) {

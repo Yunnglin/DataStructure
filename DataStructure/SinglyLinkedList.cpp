@@ -1,35 +1,37 @@
 #include "pch.h"
 #include "SinglyLinkedList.h"
 using namespace std;
-
-SinglyLinkedList::SinglyLinkedList()
+template<class ElemType>
+SinglyLinkedList<ElemType>::SinglyLinkedList()
+{
+}
+template<class ElemType>
+SinglyLinkedList<ElemType>::~SinglyLinkedList()
 {
 }
 
-SinglyLinkedList::~SinglyLinkedList()
-{
-}
-
-
-void SinglyLinkedList::CreateListF(ElemType a[], int n) {//头插法
-	Node* p = new Node();
+template<class ElemType>
+void SinglyLinkedList<ElemType>::CreateListF(ElemType a[], int n) {//头插法
+	Node<ElemType>* p = new Node<ElemType>();
 	this->header = p;//头节点
 	p->next = NULL;
 	for (int i = 0; i < n; i++) {
-		Node* q = new Node();
+		Node<ElemType>* q = new Node<ElemType>();
 		q->data=a[i];
 		q->next = p->next;
 		p->next = q;
 	}
 }
-void SinglyLinkedList::CreateListR(ElemType a[], int n) {//尾插法
-	Node* p = new Node();
-	Node* r;
+
+template<class ElemType>
+void SinglyLinkedList<ElemType>::CreateListR(ElemType a[], int n) {//尾插法
+	Node<ElemType>* p = new Node<ElemType>();
+	Node<ElemType>* r;
 	this->header = p;
 	r = p;
 	for (int i = 0; i < n; i++)
 	{
-		Node* q = new Node();
+		Node<ElemType>* q = new Node<ElemType>();
 		q->data = a[i];
 		r->next = q;
 		r = q;
@@ -37,8 +39,9 @@ void SinglyLinkedList::CreateListR(ElemType a[], int n) {//尾插法
 	r->next = NULL;
 }
 
-void SinglyLinkedList::DestroyList() {
-	Node* pre = this->header, *p=this->header->next;
+template<class ElemType>
+void SinglyLinkedList<ElemType>::DestroyList() {
+	Node<ElemType>* pre = this->header, *p=this->header->next;
 	while (p!=NULL)
 	{
 		delete pre;
@@ -49,13 +52,15 @@ void SinglyLinkedList::DestroyList() {
 	this->header->next = NULL;
 }
 
-bool SinglyLinkedList::ListEmpty() {
+template<class ElemType>
+bool SinglyLinkedList<ElemType>::ListEmpty() {
 	return (this->header->next == NULL);
 }
 
-int SinglyLinkedList::ListLength() {
+template<class ElemType>
+int SinglyLinkedList<ElemType>::ListLength() {
 	int n = 0;
-	Node* p = this->header;
+	Node<ElemType>* p = this->header;
 	while (p->next != NULL) {
 		n++;
 		p = p->next;
@@ -63,10 +68,11 @@ int SinglyLinkedList::ListLength() {
 	return n;
 }
 
-void SinglyLinkedList::DispList() {
+template<class ElemType>
+void SinglyLinkedList<ElemType>::DispList() {
 	if (this== NULL)
 		return;
-	Node* p = this->header->next;
+	Node<ElemType>* p = this->header->next;
 	while (p != NULL) {
 		cout << p->data<<"  " ;
 		p = p->next;
@@ -74,10 +80,10 @@ void SinglyLinkedList::DispList() {
 	cout << endl;
 }
 
-
-bool SinglyLinkedList::GetElem(int i, ElemType& e) {
+template<class ElemType>
+bool SinglyLinkedList<ElemType>::GetElem(int i, ElemType& e) {
 	int j = 0;
-	Node* p = this->header;
+	Node<ElemType>* p = this->header;
 	if (i <= 0)
 		return false;
 	while (j < i&&p != NULL) {
@@ -93,9 +99,10 @@ bool SinglyLinkedList::GetElem(int i, ElemType& e) {
 	}
 }
 
-int SinglyLinkedList::LocateElem(ElemType e) {
+template<class ElemType>
+int SinglyLinkedList<ElemType>::LocateElem(ElemType e) {
 	int i = 1;
-	Node* p = this->header->next;
+	Node<ElemType>* p = this->header->next;
 	while (p != NULL && p->data != e) {
 		p = p->next;
 		i++;
@@ -108,9 +115,10 @@ int SinglyLinkedList::LocateElem(ElemType e) {
 	}
 }
 
-bool SinglyLinkedList::ListInsert(int i, ElemType e) {
+template<class ElemType>
+bool SinglyLinkedList<ElemType>::ListInsert(int i, ElemType e) {
 	int j = 0;
-	Node* p = this->header, *s;
+	Node<ElemType>* p = this->header, *s;
 	if (i <= 0)
 		return false;
 	while (j < i - 1 && p != NULL) {
@@ -120,7 +128,7 @@ bool SinglyLinkedList::ListInsert(int i, ElemType e) {
 	if (p == NULL)
 		return false;
 	else {//找到第i-1个节点
-		s = new Node();
+		s = new Node<ElemType>();
 		s->data = e;
 		s->next = p->next;
 		p->next = s;
@@ -128,9 +136,10 @@ bool SinglyLinkedList::ListInsert(int i, ElemType e) {
 	}
 }
 
-bool SinglyLinkedList::ListDelete(int i, ElemType &e) {
+template<class ElemType>
+bool SinglyLinkedList<ElemType>::ListDelete(int i, ElemType &e) {
 	int j = 0;
-	Node* p = this->header, *s;
+	Node<ElemType>* p = this->header, *s;
 	if (i <= 0)
 		return false;
 	while (j < i - 1 && p != NULL) {

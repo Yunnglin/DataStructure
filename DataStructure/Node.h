@@ -2,8 +2,7 @@
 #ifndef _Node_H_
 #define _Node_H_ 
 
-typedef int ElemType;
-
+template<class ElemType>
 
 class Node {
 public:

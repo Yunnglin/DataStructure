@@ -1,13 +1,17 @@
 #include "pch.h"
 #include "Node.h"
+#ifndef _Node_Cpp_
+#define _Node_Cpp_
 
 
-Node::Node() {
+template<class ElemType>
+Node<ElemType>::Node() {
 	next = NULL;
 	data = NULL;
 }
 
-
-Node::~Node()
+template<class ElemType>
+Node<ElemType>::~Node()
 {
 }
+#endif // !_Node_Cpp_

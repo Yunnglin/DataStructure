@@ -34,6 +34,12 @@
     <Filter Include="项目实验\队列">
       <UniqueIdentifier>{d3609c9b-b6ea-46c2-babc-dfcb9ac23a85}</UniqueIdentifier>
     </Filter>
+    <Filter Include="项目实验\递归">
+      <UniqueIdentifier>{0e1c47c2-afd1-475e-9a1f-0fe8a9ff6305}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="项目实验\串">
+      <UniqueIdentifier>{25ed9e76-799e-42b7-8b90-4ad3737561f1}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">
@@ -66,6 +72,12 @@
     <ClInclude Include="Maze.h">
       <Filter>项目实验\结点</Filter>
     </ClInclude>
+    <ClInclude Include="Hanoi.h">
+      <Filter>项目实验\递归</Filter>
+    </ClInclude>
+    <ClInclude Include="KMP.h">
+      <Filter>项目实验\串</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
@@ -97,6 +109,12 @@
     </ClCompile>
     <ClCompile Include="Maze.cpp">
       <Filter>项目实验\结点</Filter>
+    </ClCompile>
+    <ClCompile Include="Hanoi.cpp">
+      <Filter>项目实验\递归</Filter>
+    </ClCompile>
+    <ClCompile Include="KMP.cpp">
+      <Filter>项目实验\串</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

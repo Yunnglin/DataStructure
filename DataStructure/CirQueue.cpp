@@ -27,16 +27,16 @@ template<class T>
 bool CirQueue<T>::deQueue(T &e) {
 	if (this->front == this->rear)
 		return false;
-	this->front = (this->front + 1) % MaxSize;
+	this->front = (this->front + 1) % CirMaxSize;
 	e = this->data[this->front];
 	return true;
 }
 
 template<class T>
 bool CirQueue<T>::enQueue(T e) {
-	if ((this->rear+1)%MaxSize==this->front)
+	if ((this->rear+1)%CirMaxSize==this->front)
 		return false;
-	this->rear=(this->rear+1)%MaxSize;
+	this->rear=(this->rear+1)%CirMaxSize;
 	this->data[this->rear] = e;
 	return true;
 }

@@ -1,14 +1,14 @@
 #pragma once
 #ifndef _CirQueue_H_
 #define _CirQueue_H_
-# define MaxSize  100
+# define CirMaxSize  100
 template<class T>
 class CirQueue
 {
 public :
 	int front;
 	int rear;
-	T data[MaxSize];
+	T data[CirMaxSize];
 public:
 	void Destroy();
 	bool IsEmpty();

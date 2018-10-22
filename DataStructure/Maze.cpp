@@ -1,6 +1,10 @@
 #include "pch.h"
 #include "Maze.h"
 #include "SqStack.h"
+#include "SqStack.cpp"
+#include "LinkedQueue.h"
+#include "LinkedQueue.cpp"
+using namespace std;
 
 Maze::Maze(int i,int j ,int di)
 {
@@ -17,8 +21,10 @@ Maze::~Maze()
 {
 }
 
-bool Maze::Mazepath(int xi, int yi, int xe, int ye,int* mg,int M,int N) {//Â·¾¶Îª´Ó£¨xi,yi£©->(xe,ye)
-	Maze path[MaxSize];//¶¨Òå¶ÔÏóµÄ»ù±¾ĞÎÊ½£¬¶¨ÒåÊ±ÒÑ·ÖÅäÄÚ´æ£¬ÎªÄÚ´æÕ»
+//ÓÃÕ»·½·¨Çó½âÃÔ¹¬ÎÊÌâ
+//Éî¶ÈÓÅÏÈËÑË÷Ëã·¨
+bool Maze::MazepathStack(int xi, int yi, int xe, int ye,int* mg,int M,int N) {//Â·¾¶Îª´Ó£¨xi,yi£©->(xe,ye)
+	Maze path[MazeMaxSize];//¶¨Òå¶ÔÏóµÄ»ù±¾ĞÎÊ½£¬¶¨ÒåÊ±ÒÑ·ÖÅäÄÚ´æ£¬ÎªÄÚ´æÕ»
 	//Maze *e Î´·ÖÅäÄÚ´æ
 	//Maze *e=new Maze();//·ÖÅäÄÚ´æ£¬ÇÒÎª¶ÑÄÚ´æ£¬ĞèÊÖ¶¯ÊÍ·Å
 	int i, j, di, i1, j1, k;
@@ -26,6 +32,58 @@ bool Maze::Mazepath(int xi, int yi, int xe, int ye,int* mg,int M,int N) {//Â·¾¶Î
 	SqStack<Maze>* st = new SqStack<Maze>();
 	Maze e(xi, yi, -1);//ÉèÖÃeÎªÈë¿Ú
 	st->Push(e);
-	mg[(xi - 1)*M + (yi - 1)] = -1;//½«ÃÔ¹¬Èë¿ÚÖµÉèÎª-1
+	mg[xi*N + (yi)] = -1;//½«ÃÔ¹¬Èë¿ÚÖµÉèÎª-1
+	while (!st->StackEmpty()) {
+		st->GetTop(e);
+		i = e.i; j = e.j; di = e.di;
+		if (i == xe && j == ye) {
+			cout << "Ò»ÌõÃÔ¹¬Â·¾¶ÈçÏÂ£º" << endl;
+			k = 0;
+			while (!st->StackEmpty()) {
+				st->Pop(e);
+				path[k++] = e;
+			}
+			while (k >= 1) {
+				k--;
+				cout << "(" << path[k].i  << "," <<  path[k].j << ")  ";
+				if ((k + 2) % 5 == 0)
+					cout << endl;
+			}
+			cout << endl;
+			st->DestroyStack();
+			return true;
+		}
+		find = false;
+		while (di < 4 && !find) {
+			di++;
+			switch (di) {
+			case 0:	i1 = i - 1; j1 = j; break;
+			case 1: i1 = i; j1 = j + 1; break;
+			case 2: i1 = i + 1; j1 = j; break;
+			case 3: i1 = i; j1 = j - 1; break;
+			}
+			if (mg[i1*N + j1] == 0)//ÕÒÏÂÒ»¸öÏàÁÚ¿É×ß·½¿é
+				find = true;
+		}
+		if (find) {
+			st->data[st->top].di = di;
+			e.i = i1; e.j = j1; e.di = -1;
+			st->Push(e);
+			mg[i1*N + j1] = -1;
+		}
+		else {
+			st->Pop(e);
+			mg[e.i*N + e.j] = 0;
+		}
+	}
+	st->DestroyStack();
+	return false;
+}
 
+
+//ÓÃ¶ÓÁĞ·½·¨
+//¹ã¶ÈÓÅÏÈËã·¨
+bool Maze::MazepathQueue(int xi, int yi, int xe, int ye, int* mg, int M, int N) {
+	Maze e;
+	int i, j, di, i1, j1;
 }

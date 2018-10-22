@@ -2,12 +2,12 @@
 #ifndef _SinglyLinkedList_H_
 #define _SinglyLinkedList_H_
 #include "Node.h"
-typedef int ElemType;
-
+#include "Node.cpp"
+template<class ElemType>
 class SinglyLinkedList//定义头指针及各种操作函数
 {
 public:
-	Node* header;
+	Node<ElemType>* header;
 	void CreateListF(ElemType a[], int n);//头插法
 	void CreateListR( ElemType a[], int n);//尾插法
 	void DestroyList();//销毁链表

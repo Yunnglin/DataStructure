@@ -2,7 +2,7 @@
 #ifndef _SqStack_H_
 #define _SqStack_H_
 
-constexpr auto MaxSize = 100;
+#define MaxSize  1000
 
 template<class ElemType>
 
