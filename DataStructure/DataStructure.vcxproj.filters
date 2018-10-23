@@ -75,7 +75,10 @@
     <ClInclude Include="Hanoi.h">
       <Filter>项目实验\递归</Filter>
     </ClInclude>
-    <ClInclude Include="KMP.h">
+    <ClInclude Include="SeqQueue.h">
+      <Filter>项目实验\队列</Filter>
+    </ClInclude>
+    <ClInclude Include="SqString.h">
       <Filter>项目实验\串</Filter>
     </ClInclude>
   </ItemGroup>
@@ -113,7 +116,10 @@
     <ClCompile Include="Hanoi.cpp">
       <Filter>项目实验\递归</Filter>
     </ClCompile>
-    <ClCompile Include="KMP.cpp">
+    <ClCompile Include="SeqQueue.cpp">
+      <Filter>项目实验\队列</Filter>
+    </ClCompile>
+    <ClCompile Include="SqString.cpp">
       <Filter>项目实验\串</Filter>
     </ClCompile>
   </ItemGroup>

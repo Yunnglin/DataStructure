@@ -11,6 +11,10 @@
 #include "LinkedQueue.cpp"
 #include "CirQueue.h"
 #include "CirQueue.cpp"
+#include "SeqQueue.h"
+#include "SeqQueue.cpp"
 #include "Maze.h"
+#include "SqString.h"
+#include "Hanoi.h"
 #endif // !_Header_H_
 

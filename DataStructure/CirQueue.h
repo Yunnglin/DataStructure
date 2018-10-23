@@ -1,7 +1,7 @@
 #pragma once
 #ifndef _CirQueue_H_
 #define _CirQueue_H_
-# define CirMaxSize  100
+# define CirMaxSize  1000
 template<class T>
 class CirQueue
 {

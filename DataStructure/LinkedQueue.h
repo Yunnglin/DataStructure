@@ -3,12 +3,16 @@
 #define _LinkedQueue_H_
 #include "Node.h"
 #include "Node.cpp"
+
+#define LQMaxSize 1000
 template<class ElemType>
 class LinkedQueue
 {
 public :
 	Node<ElemType>* front;//指向队首结点
 	Node<ElemType>* rear;//指向队尾结点
+	ElemType data[LQMaxSize];
+
 
 	void DestroyQueue();//销毁队列
 	bool QueueEmpty();//判断队列是否为空
