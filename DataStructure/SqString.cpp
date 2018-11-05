@@ -4,7 +4,7 @@ using namespace std;
 
 SqString::SqString()
 {
-	memset(this->data, 0x0,  sizeof(this->data));
+	memset(this->data, 0x0, sizeof(this->data));
 }
 
 
@@ -32,7 +32,7 @@ void SqString::DispStr() {
 }
 
 void SqString::GetNext(SqString t, int next[]) {
-	int j, k ;
+	int j, k;
 	j = 0; k = -1;//扫描记录t[j]之前与t开头相同的字符隔宿个数
 	next[0] = -1;
 	while (j < t.length - 1) {
@@ -46,21 +46,22 @@ void SqString::GetNext(SqString t, int next[]) {
 	}
 }
 
-int SqString::KMPIndex(SqString s, SqString t) {
+int SqString::KMPIndex(SqString t) {
 	int next[SStrMaxSize], i = 0, j = 0;
 	GetNext(t, next);
-	while (i < s.length&&j < t.length) {
-		if (j == -1 || s.data[i] == t.data[j]) {
+	while (i < this->length&&j < t.length) {
+		if (j == -1 || this->data[i] == t.data[j]) {
 			i++;
 			j++;
 		}
 		else {
 			j = next[j];
 		}
-		if (j >= t.length)
-			return (i - t.length);
-		else {
-			return (-1);
-		}
 	}
+	if (j >= t.length)
+		return (i - t.length);
+	else
+		return (-1);
+
+
 }

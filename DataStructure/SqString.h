@@ -12,7 +12,7 @@ public:
 public:
 	void DispStr();
 	void GetNext(SqString t, int next[]);
-	int KMPIndex(SqString s, SqString t);
+	int KMPIndex(SqString t);
 
 public:
 	SqString();
