@@ -7,7 +7,9 @@ template<class ElemType>
 class Node {
 public:
 	ElemType data;
-	Node * next;
+	Node* next;
+	Node* lchild;
+	Node* rchild;
 	Node();
 	~Node();
 };

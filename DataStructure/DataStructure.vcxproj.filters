@@ -40,6 +40,12 @@
     <Filter Include="项目实验\串">
       <UniqueIdentifier>{25ed9e76-799e-42b7-8b90-4ad3737561f1}</UniqueIdentifier>
     </Filter>
+    <Filter Include="项目实验\树">
+      <UniqueIdentifier>{15780db5-07de-4874-9cf4-73aa2be0963f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="项目实验\树\二叉链">
+      <UniqueIdentifier>{7641f1d2-5920-4ae3-9c1c-7e672da9afcd}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">
@@ -80,6 +86,9 @@
     </ClInclude>
     <ClInclude Include="SqString.h">
       <Filter>项目实验\串</Filter>
+    </ClInclude>
+    <ClInclude Include="BTree.h">
+      <Filter>项目实验\树\二叉链</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -122,5 +131,11 @@
     <ClCompile Include="SqString.cpp">
       <Filter>项目实验\串</Filter>
     </ClCompile>
+    <ClCompile Include="BTree.cpp">
+      <Filter>项目实验\树\二叉链</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="cpp.hint" />
   </ItemGroup>
 </Project>

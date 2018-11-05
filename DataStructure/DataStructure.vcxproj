@@ -151,6 +151,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="BTree.h" />
     <ClInclude Include="CirQueue.h" />
     <ClInclude Include="DuLinkedList.h" />
     <ClInclude Include="Hanoi.h" />
@@ -166,6 +167,7 @@
     <ClInclude Include="SqString.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="BTree.cpp" />
     <ClCompile Include="CirQueue.cpp" />
     <ClCompile Include="DataStructure.cpp" />
     <ClCompile Include="DuLinkedList.cpp" />
@@ -184,6 +186,9 @@
     <ClCompile Include="SinglyLinkedList.cpp" />
     <ClCompile Include="SqStack.cpp" />
     <ClCompile Include="SqString.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="cpp.hint" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

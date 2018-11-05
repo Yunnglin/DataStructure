@@ -16,6 +16,8 @@
 #include "Maze.h"
 #include "SqString.h"
 #include "Hanoi.h"
+#include "BTree.h"
+#include "BTree.cpp"
 
 #endif // !_Header_H_
 
