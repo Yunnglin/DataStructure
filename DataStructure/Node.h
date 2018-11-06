@@ -8,8 +8,6 @@ class Node {
 public:
 	ElemType data;
 	Node* next;
-	Node* lchild;
-	Node* rchild;
 	Node();
 	~Node();
 };

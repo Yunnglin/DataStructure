@@ -8,8 +8,6 @@ template<class ElemType>
 Node<ElemType>::Node() {
 	next = NULL;
 	data = NULL;
-	lchild = NULL;
-	rchild = NULL;
 }
 
 template<class ElemType>

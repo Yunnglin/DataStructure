@@ -87,7 +87,7 @@
     <ClInclude Include="SqString.h">
       <Filter>项目实验\串</Filter>
     </ClInclude>
-    <ClInclude Include="BTree.h">
+    <ClInclude Include="BTNode.h">
       <Filter>项目实验\树\二叉链</Filter>
     </ClInclude>
   </ItemGroup>
@@ -131,7 +131,7 @@
     <ClCompile Include="SqString.cpp">
       <Filter>项目实验\串</Filter>
     </ClCompile>
-    <ClCompile Include="BTree.cpp">
+    <ClCompile Include="BTNode.cpp">
       <Filter>项目实验\树\二叉链</Filter>
     </ClCompile>
   </ItemGroup>
